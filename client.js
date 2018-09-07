@@ -20,7 +20,7 @@ var checkNIP = (nip) => {
 
         var args = { NIP: nip };
         soap.createClient(url, (err, client) => {
-            client.SprawdzNip(args, (err, result) => {        
+            client.SprawdzNIP(args, (err, result) => {        
                 return resolve(result.Komunikat);
             });
         });

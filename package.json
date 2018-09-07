@@ -7,6 +7,7 @@
   "author": "Tomasz Filipkowski <filipkow@wit.edu.pl>",
   "license": "MIT",
   "dependencies": {
+    "node-vat-payer-status": "https://github.com/filipkot/node-vat-payer-status.git",
     "soap": "^0.25.0"
   }
 }
