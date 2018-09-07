@@ -1,0 +1,12 @@
+{
+  "name": "node-vat-payer-status",
+  "version": "1.0.0",
+  "description": "Checking the status of a VAT payer in Poland",
+  "main": "client.js",
+  "repository": "https://github.com/filipkot/node-vat-payer-status.git",
+  "author": "Tomasz Filipkowski <filipkow@wit.edu.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "soap": "^0.25.0"
+  }
+}
