@@ -19,7 +19,7 @@ client.SprawdzNip(<your nip>)
 
 ## Author
 
-* **Tomasz Filipkowski** - *Initial work* - [PurpleBooth](https://github.com/filipkot)
+* **Tomasz Filipkowski** - (https://github.com/filipkot)
 
 ## License
 
