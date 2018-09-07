@@ -14,7 +14,7 @@ module.exports = {
 };
 
 var checkNIP = (nip) => {
-    return new((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         if(!validateNip(nip))
             return reject('Błędny NIP');
 
