@@ -17,10 +17,10 @@ client.SprawdzNip(<your nip>)
     .then((value) => { console.log(value)});
 ```
 
-## Author
+### Author
 
-* **Tomasz Filipkowski** - (https://github.com/filipkot)
+* **Tomasz Filipkowski** https://github.com/filipkot
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
