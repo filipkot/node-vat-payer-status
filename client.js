@@ -2,18 +2,31 @@ var soap = require('soap');
 var url = 'https://sprawdz-status-vat.mf.gov.pl/?wsdl';
 
 module.exports = {
-    SprawdzNIP: (nip) => {
+    SprawdzNip: async function(nip) {
+        try {
+            const data = await checkNIP(nip);
+            return data;
+
+        } catch (error) {
+            return error;
+        }
+    }
+};
+
+var checkNIP = (nip) => {
+    return new Promise((resolve, reject) => {
         if(!validateNip(nip))
-            return 'Błędny NIP';
+            return reject('Błędny NIP');
 
         var args = { NIP: nip };
         soap.createClient(url, (err, client) => {
-            client.SprawdzNIP(args, (err, result) => {
-                return result.Komunikat;
+            client.SprawdzNIP(args, (err, result) => {        
+                return resolve(result.Komunikat);
             });
         });
-    }
-};
+
+    });        
+}
 
 // zrodlo: http://blog.aleksander.kaweczynski.pl/walidacja-numerow-pesel-nip-regon-w-javascript-i-php/ 
 var validateNip = (nip) => {
